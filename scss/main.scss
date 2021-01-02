@@ -1,3 +1,106 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 @import 'base/root';
 @import 'base/reset';
+@import 'utils';
+
+body{
+    @extend .flex;
+    @extend .content-center;
+    @extend .items-center;
+    @extend .bg-primary--400;    
+    @extend .bg-repeat-no;
+    background-image: url(/assets/images/bg-pattern-top.svg),url(/assets/images/bg-pattern-bottom.svg);
+    background-position: 
+      top -600px left -700px,
+      bottom -600px right -700px;
+    @media (min-width: 760px) {
+        background-position: 
+        top -700px left -500px,
+        bottom -700px right -500px;
+    }
+    @media (min-width: 1020px) {
+        background-position: 
+        top -600px left -300px,
+        bottom -600px right -300px;
+    }
+}
+
+
+
+main{
+    display: grid;
+    grid-template-columns: minmax(auto,350px);
+    
+
+}
+.card{
+    display: grid;
+    grid-template-rows: 1fr 1fr auto;
+    @extend .br-2;
+    @extend .bg-neutral--300;
+    &__cover{
+        @extend .relative;
+        @extend .bg-repeat-no;
+        @extend .bg-size-cover;
+        @extend .bg-position-center;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+    &__picture{
+        @extend .w-10;
+        @extend .h-10;
+        @extend .bg-repeat-no;
+        @extend .bg-size-cover;
+        @extend .bg-position-center;
+        @extend .br-max;
+        &-container{
+            @extend .br-max;
+            @extend .absolute;
+            @extend .bottom-0;
+            @extend .left-50;
+            @extend .transform-translate-m50x-50y;
+            @extend .bg-neutral--300;
+            padding: 0.25rem;
+
+        }
+    }
+    &__content{
+        @extend .padding-t-5;
+        @extend .padding-b-3;
+        @extend .flex;
+        @extend .items-center;
+        @extend .column;
+        @extend .space-y-1;
+        &-title{
+            @extend .flex;
+            @extend .row;
+            @extend .items-center;
+            @extend .content-center;
+            @extend .space-x-1;
+            @extend .fs-400;
+        }
+        border-bottom: var(--clr-neutral-100) solid 1px;
+
+    }
+    &__footer{
+        @extend .padding-y-3;
+        @extend .flex;
+        @extend .row;
+        @extend .items-center;
+        @extend .content-space-evenly;
+        @extend .content-center;
+    }
+    &__stat{
+        @extend .flex;
+        @extend .column;
+        @extend .items-center;
+        &-number{
+            @extend .fs-400;
+            @extend .fw-700;
+        }
+        &-title{
+            @extend .fs-200;
+            @extend .color-neutral--100;
+        }
+    }
+}

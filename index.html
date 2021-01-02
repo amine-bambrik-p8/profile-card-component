@@ -4,34 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend Mentor | Profile card component</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body class=" [ ] [ ff-primary ]">
     <main>
         <section>
             <article class="[ card ]">
-                <div class="[ card__cover ]">
-                    <div class="[ card__picture ]"></div>
+                <div style="background-image: url(/assets/images/bg-pattern-card.svg);" class="[ card__cover ]">
+
+                    <div  class="[ card__picture-container ]">
+                        <div style="background-image: url(/assets/images/image-victor.jpg);" class="[ card__picture ]"></div>
+                    </div>
                 </div>
                 <div class="[ card__content ]">
-                    <div class="[ ]">
-                        <h2>
+                    <div class="[ card__content-title ]">
+                        <span class="[ fw-700 ]">
                             Victor Crest                      
-                        </h2>
-                        <span>
+                        </span>
+                        <span class="[ ] [ color-primary--300 ]">
                             26
                         </span>
                     </div>
-                    <div>
+                    <div class="[ ] [ color-neutral--100 fs-300 ]">
                         <span>London</span>
                     </div>
                 </div>
                 <div class=" [ card__footer ">
                     <div class="[ card__stat ]">
-                        <span class="[ card__stat-number]">
+                        <span class="[ card__stat-number ]">
                             80K
                         </span>
-                        <span class="[ card__stat-title]">
+                        <span class="[ card__stat-title ]">
                             Followers
+                        </span>
+                    </div>
+                    <div class="[ card__stat ]">
+                        <span class="[ card__stat-number ]">
+                            803K
+                        </span>
+                        <span class="[ card__stat-title ]">
+                            Likes
+                        </span>
+                    </div>
+                    <div class="[ card__stat ]">
+                        <span class="[ card__stat-number ]">
+                            1.4K
+                        </span>
+                        <span class="[ card__stat-title ]">
+                            Photos
                         </span>
                     </div>
                 </div>
